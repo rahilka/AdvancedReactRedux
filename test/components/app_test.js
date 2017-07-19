@@ -1,14 +1,13 @@
-import { renderComponent , expect } from '../test_helper';
+// the purpose of this file is to test the component App
+
+import { renderComponent, expect } from '../test_helper';
 import App from '../../src/components/app';
 
-describe('App' , () => {
-  let component;
+// Use 'describe' to group together similar tests, and pass whatever string we want, it will appear in the report after testing
+describe('App')
 
-  beforeEach(() => {
-    component = renderComponent(App);
-  });
+// Use 'it' to test a single attribute of a target, for one single test
+it('shows the correct text')
 
-  it('renders something', () => {
-    expect(component).to.exist;
-  });
-});
+// Use 'expect' to make an 'assertion' about a target
+expect
