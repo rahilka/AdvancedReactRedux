@@ -5,16 +5,15 @@ import App from '../../src/components/app';
 
 // Use 'describe' to group together similar tests, and pass whatever string we want, it will appear in the report after testing
 describe('App', () => {
+
+	let component;
+
+	beforeEach(() => {
+		component = renderComponent(App);
+	});
 		
-	// Use 'it' to test a single attribute of a target, for one single test
-	it('shows the correct text', () => {
-
-		// create an instance of App
-		const component = renderComponent(App);
-
-		// Use 'expect' to make an 'assertion' about a target
-		expect(component).to.contain('React simple starter');
-
+	it('shows a comment box', () => {
+		expect(component.find('.comment-box')).to.exist;
 	});
 
 });
